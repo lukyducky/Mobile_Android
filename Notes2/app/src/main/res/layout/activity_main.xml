@@ -10,45 +10,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:id="@+id/linearLayout">
 
         <ListView
             android:id="@+id/mainListView"
             android:layout_width="match_parent"
-            android:layout_height="473dp"
+            android:layout_height="428dp"
             app:layout_constraintRight_toRightOf="parent"
             tools:layout_editor_absoluteY="-52dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp"
-            android:weightSum="1">
-
-            <EditText
-                android:id="@+id/quickNote"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:elevation="0dp"
-                android:onClick="onAddItem"
-                android:text="New Note"
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="280dp" />
-
-        </LinearLayout>
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:elevation="0dp"
+        android:onClick="openNewNote"
+        android:text="New Note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </android.support.constraint.ConstraintLayout>
